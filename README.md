@@ -1,4 +1,30 @@
-# Getting Started with Create React App
+# Token Portfolio
+
+## Prerequisites
+- React
+- Axios
+- @emotion/styled
+
+## Notes to reviewer
+
+- Install the required dependencies by running `npm install react axios @emotion/styled` in the terminal.
+
+- In the Portfolio component, the hardcoded portfolio is defined as hardCodedPortfolio which is an object that maps token symbols to the number of tokens held by the user.
+
+- The component makes a GET request to https://api.coingecko.com/api/v3/simple/price?ids=${Object.keys(hardCodedPortfolio).join(",")}&vs_currencies=usd to fetch the prices of the tokens in USD.
+
+- The useEffect hook is used to make the GET request and the resulting data is stored in the tokens state.
+
+- The component uses the getHoldingValue utility function to calculate the holding value of each token in the portfolio by multiplying the token's price by its quantity.
+
+- The component displays the portfolio data in a table with the following columns:
+    - Symbol
+    - Price (USD)
+    - Quantity
+    - Holding (USD)
+
+# Readme Boilerplate
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
