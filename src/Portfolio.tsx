@@ -52,7 +52,7 @@ const Portfolio: React.FC = () => {
             })));
         };
         fetchData();
-    }, []);
+    }, [tokens]);
 
     return (
         <StyledDiv>
